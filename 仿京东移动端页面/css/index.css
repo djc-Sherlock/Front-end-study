@@ -1,0 +1,202 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* 清除浮动 */
+
+.app {
+    height: 45px;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background-color: #333333;
+    color: #fff;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #f63515;
+    padding-top: 2px;
+}
+
+.app ul li img {
+    width: 10px;
+}
+
+.app ul li:nth-child(2) img {
+    width: 30px;
+}
+
+.jd-header-new-bar {
+    position: fixed;
+    height: 44px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.jd-header-new-bar .search-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.jd-header-new-bar .search-btn span {
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+
+.jd-header-new-bar .search-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+}
+
+.jd-header-new-bar .search {
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 50px;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+
+.jd-header-new-bar .search .jd-icon {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-header-new-bar .search .jd-icon::after {
+    content: '';
+    display: block;
+    /* position: absolute;
+    right: -8px;
+    top: 0; */
+    margin-left: 27px;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+.jd-header-new-bar .search .sou {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat -81px 0;
+    background-size: 200px auto;
+}
+
+.jd-header-new-bar .search .input {
+    position: absolute;
+    top: 8px;
+    left: 70px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.brand {
+    /* 圆角切除的是盒子，图片不会切除，添加overflow就行 */
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+nav {}
+
+nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+nav a span {
+    display: block;
+}
+
+nav {
+    padding-top: 5px;
+}
+
+.news {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.news img {
+    width: 100%;
+}
+
+.news a {
+    float: left;
+    width: 50%;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n + 2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
