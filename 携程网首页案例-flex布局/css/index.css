@@ -225,17 +225,71 @@ nav {
 /* 销售模块 */
 
 .sales-box {
-    background-color: #bbb;
+    background-color: #fff;
     border-top: 1px solid #ccc;
     margin: 4px;
 }
 
 .sales-hd {
-    background-color: #ccc;
+    position: relative;
+    height: 44px;
     border-bottom: 1px solid #ccc;
 }
 
 .sales-hd h2 {
+    position: relative;
     text-indent: -9999px;
     overflow: hidden;
+    position: relative;
+    margin: 17px 0;
+}
+
+.sales-hd h2::after {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    content: '';
+    width: 79px;
+    height: 15px;
+    background: url(../images/hot.png) no-repeat 0px -20px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    background: -webkit-linear-gradient(left, #ff506c, #ff6bcd);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+}
+
+.more::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+.row a img {
+    width: 100%;
 }
