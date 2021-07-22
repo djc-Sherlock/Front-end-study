@@ -5,6 +5,7 @@
 ## 父项常见属性
 
 -   flex-direction：设置主轴的方向
+
     [![WBtYJ1.jpg](https://z3.ax1x.com/2021/07/22/WBtYJ1.jpg)](https://imgtu.com/i/WBtYJ1)
 -   justify-content：设置主轴上的子元素排列方式
     [![WBttRx.jpg](https://z3.ax1x.com/2021/07/22/WBttRx.jpg)](https://imgtu.com/i/WBttRx)
