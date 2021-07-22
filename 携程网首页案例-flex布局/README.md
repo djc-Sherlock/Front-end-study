@@ -5,9 +5,12 @@
 ## 父项常见属性
 
 -   flex-direction：设置主轴的方向
+    [![WBtYJ1.jpg](https://z3.ax1x.com/2021/07/22/WBtYJ1.jpg)](https://imgtu.com/i/WBtYJ1)
 -   justify-content：设置主轴上的子元素排列方式
+    [![WBttRx.jpg](https://z3.ax1x.com/2021/07/22/WBttRx.jpg)](https://imgtu.com/i/WBttRx)
 -   flex-wrap：设置子元素是否换行
 -   align-content：设置侧轴上的子元素的排列方式（多行）
+    [![WBtNz6.jpg](https://z3.ax1x.com/2021/07/22/WBtNz6.jpg)](https://imgtu.com/i/WBtNz6)
 -   align-items：设置侧轴上的子元素排列方式（单行）
 -   flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap
 
