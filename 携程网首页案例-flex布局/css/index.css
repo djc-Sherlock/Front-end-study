@@ -220,3 +220,22 @@ nav {
 .subnav-entry li .subnav-entry-icon-icon5 {
     background-position: 0 -126px;
 }
+
+
+/* 销售模块 */
+
+.sales-box {
+    background-color: #bbb;
+    border-top: 1px solid #ccc;
+    margin: 4px;
+}
+
+.sales-hd {
+    background-color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+    text-indent: -9999px;
+    overflow: hidden;
+}
