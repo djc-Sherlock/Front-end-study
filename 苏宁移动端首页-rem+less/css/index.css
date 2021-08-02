@@ -59,3 +59,11 @@ html {
     font-size: 50px;
   }
 }
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  background: #f2f2f2;
+}
