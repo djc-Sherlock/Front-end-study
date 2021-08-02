@@ -8,7 +8,7 @@
 
 设计图： 本设计图采用 750px 设计尺寸
 
-3、设置视口标签以及引入初始化样式
+2、设置视口标签以及引入初始化样式
 
 ```
 <meta name="viewport" content="width=device-width, user-scalable=no,         initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/normalize.css">
 ```
 
-4、设置公共 common.less 文件
+3、设置公共 common.less 文件
 
 -   新建 common.less 设置好最常见的屏幕尺寸，利用媒体查询设置不同的 html 字体大小，因为除了首页其他页面也需要
 -   我们关心的尺寸有 320px、360px、375px、384px、400px、414px、424px、480px、540px、720px、750px
