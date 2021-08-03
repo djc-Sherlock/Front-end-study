@@ -68,6 +68,7 @@ body {
   background: #f2f2f2;
 }
 .search-content {
+  display: flex;
   position: fixed;
   top: 0;
   left: 50%;
@@ -75,4 +76,9 @@ body {
   width: 15rem;
   height: 1.76rem;
   background-color: #ffc001;
+}
+.search-content .classfiy {
+  width: 0.88rem;
+  border-color: pink;
+  margin: 11px 25px 7px 24px;
 }
