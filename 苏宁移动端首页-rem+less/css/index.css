@@ -67,3 +67,12 @@ body {
   font-family: Arial, Helvetica;
   background: #f2f2f2;
 }
+.search-content {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 1.76rem;
+  background-color: #ffc001;
+}
