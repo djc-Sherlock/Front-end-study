@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>if、switch判断</title>
-		<script>
+		<title>比较两个数的最大值</title>
+		<!-- <script>
 			// 判断时间阶段;
 			// 通过比较运算符判定输入的时间的范围，弹出相应的问候信息
 			let time = prompt('请输入现在时间');
@@ -17,6 +17,21 @@
 				console.log(`先生，深夜好`);
 			} else {
 				console.log(`先生，凌晨好`);
+			}
+		</script> -->
+		<script>
+			// 比较两个数的最大值 ;
+			// 用户依次输入2个值，最后弹出最大的那个值
+			let num = prompt('请输入数字，用于比较大小');
+			let num1 = prompt('请再输入个数字');
+			if (num > num1) {
+				console.log(`最大的值为：${num}`);
+			} else if (num < num1) {
+				console.log(`最大的值为：${num1}`);
+			} else if (num === num1) {
+				console.log(`输入的值相同，最大值为${num}`);
+			} else {
+				console.log(`系统异常`);
 			}
 		</script>
 	</head>
