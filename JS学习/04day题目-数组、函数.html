@@ -62,6 +62,22 @@
 				return arr;
 			}
 			console.log(sort([4, 1, 6, 88, 9, 3, 666]));
+			function cal(x, c, y) {
+				switch (c) {
+					case '+':
+						return parseInt(x) + parseInt(y);
+					case '-':
+						return parseInt(x) - parseInt(y);
+					case '*':
+						return parseInt(x) * parseInt(y);
+					case '/':
+						return parseInt(x) / parseInt(y);
+				}
+			}
+			var x = prompt('请输入第一个数');
+			let c = prompt('请输入运算符');
+			let y = prompt('请输入第二个数');
+			console.log(cal(x, c, y));
 		</script>
 	</head>
 
