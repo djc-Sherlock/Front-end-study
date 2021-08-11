@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>题目</title>
+		<script>
+			// 创建一个电脑对象，该对象要有颜色、重量、品牌、型号，可以看电影、听音乐、打游戏和敲代码。
+			var computer = {
+				color: 'black',
+				weight: '2.1kg',
+				logo: 'lenovo',
+				model: 'Y7000',
+				skill: function () {
+					console.log('看电影、听音乐、打游戏和敲代码');
+				}
+			};
+			console.log(computer.skill());
+
+			// 书写一个构造函数，用来创建学生对象，学生对象包括的内容有：姓名（name）、学号（id）、性别（sex）、年级（grade）、打招呼（sayHi）—— 在弹出框中提示：“你好我是XXX”，其中XXX代表对象的name属性值
+			function Student(name, id, sex, grade) {
+				this.name = name;
+				this.id = id;
+				this.sex = sex;
+				this.grade = grade;
+				this.sayhi = function () {
+					alert('你好，我是' + name);
+				};
+			}
+			var student = new Student('djc', '16263311', '男', '测试');
+			// 遍历对象
+			// for (var k in student) {
+			// 	console.log(student);
+			// 	console.log(student[k]);
+			// }
+			student.sayhi();
+		</script>
+	</head>
+
+	<body></body>
+</html>
