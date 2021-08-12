@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>题目</title>
+		<script>
+			function reTime() {
+				let date = new Date();
+				let hour = date.getHours();
+				hour = hour < 10 ? '0' + hour : hour;
+				let min = date.getMinutes();
+				min = min < 10 ? '0' + min : min;
+				let s = date.getSeconds();
+				s = s < 10 ? '0' + s : s;
+				return `${hour}:${min}:${s}`;
+			}
+			console.log(reTime()); //18:49:07
+		</script>
+	</head>
+
+	<body></body>
+</html>
