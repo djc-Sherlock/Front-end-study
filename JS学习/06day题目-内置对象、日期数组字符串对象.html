@@ -23,6 +23,87 @@
 			arr.splice(0, 1, '赵本山');
 			arr.splice(6, 1, '鹿晗');
 			console.log(arr);
+
+			// 计算指定日期是今年的第几天
+			// ​题目描述：制作一个函数，getDayNum( 年月日日期 )，可以返回指定日期是当前年的第几天
+			// 1.判断是闰年还是平年
+			function isRun(year) {
+				var flag = false;
+				if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+					return (flag = true);
+				}
+			}
+
+			function get_day(year, month, day) {
+				var days = day;
+				for (var i = 1; i < month; i++) {
+					switch (i) {
+						case 1:
+						case 3:
+						case 5:
+						case 7:
+						case 8:
+						case 10:
+						case 12:
+							days += 31;
+							break;
+						case 4:
+						case 6:
+						case 9:
+						case 11:
+							days += 30;
+							break;
+						case 2:
+							if (isRun(year)) {
+								days += 29;
+							} else {
+								days += 28;
+							}
+							break;
+					}
+				}
+				return days;
+			}
+			var year = Number(prompt('请输入多少年：'));
+			var month = Number(prompt('请输入月份：'));
+			var day = Number(prompt('请输入几号：'));
+			var result = get_day(year, month, day);
+
+			// 16进制随机颜色，
+			// ​题目描述：使用Math对象，制作一个16进制的随机颜色
+			// ​题目提示：16进制包括 “ 0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F ”
+
+			var arr = [
+				'0',
+				'1',
+				'2',
+				'3',
+				'4',
+				'5',
+				'6',
+				'7',
+				'8',
+				'9',
+				'A',
+				'B',
+				'C',
+				'D',
+				'E',
+				'F'
+			];
+
+			function getColor() {
+				var str = '#';
+				for (var i = 0; i < 6; i++) {
+					function getRandom(min, max) {
+						return Math.floor(Math.random() * (max - min + 1)) + min;
+					}
+					var re = arr[getRandom(0, arr.length - 1)];
+					str += re;
+				}
+				console.log(str.toLowerCase());
+			}
+			getColor();
 		</script>
 	</head>
 
