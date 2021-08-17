@@ -136,6 +136,26 @@
 			str = str.slice(1, 6);
 			console.log(str);
 			// 6、 找出以上字符串中出现次数最多的字符和出现的次数
+			str = 'abaasdffggghhjjkkgfddsssss3444343';
+			var obj = {};
+			for (var i = 0; i < str.length; i++) {
+				var k = str[i];
+				if (obj[k]) {
+					obj[k]++;
+				} else {
+					obj[k] = 1;
+				}
+			}
+			console.log(obj);
+			let num = 0;
+			value = null;
+			for (var j in obj) {
+				if (obj[j] > num) {
+					num = obj[j];
+					value = j;
+				}
+			}
+			console.log(value, num);
 
 			// 7、 遍历字符串，并将遍历出的字符两头添加符号“@”
 			var strArr = str.split('');
