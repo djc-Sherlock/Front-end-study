@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>WebAPI</title>
+	</head>
+
+	<body>
+		<div id="time">2021-08-23</div>
+		<script>
+			//1. 因为文档是从上往下加载，所以先得有标签 所以script写道下面来了
+			//2. get获取 element 元素 by 通过
+			//3. 参数id是大小写敏感的字符串
+			//4. 返回值的一个element(元素)对象
+			var timer = document.getElementById('time');
+			console.log(timer); //<div id="time">2021-08-23</div>
+			console.log(typeof timer); //object
+			//5. console.dir(对象) 打印返回的元素对象 更好地查看里面的属性和方法
+			console.dir(timer); //div#time里面含有很多方法
+		</script>
+	</body>
+	>
+</html>
