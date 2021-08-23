@@ -165,6 +165,17 @@
 				newStr += newChar;
 			}
 			console.log(newStr);
+
+			// 	   从以下学员名单中随机选出4个学员：注意：不要有重复的学员
+			var arrTwo = ['鹿晗', '王俊凯', '蔡徐坤', '彭于晏', '周杰伦', '刘德华', '赵本山'];
+			let newstudent = [];
+			while (newstudent.length < 4) {
+				let num = Math.floor(Math.random() * 7);
+				if (newstudent.indexOf(arrTwo[num]) == -1) {
+					newstudent.push(arrTwo[num]);
+				}
+			}
+			console.log(newstudent);
 		</script>
 	</head>
 
