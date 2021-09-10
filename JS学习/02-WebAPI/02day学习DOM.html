@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.box {
+				position: relative;
+				width: 400px; /*设置宽度才能用margin居中 */
+				border-bottom: 1px solid #ccc;
+				margin: 100px auto;
+			}
+			input {
+				border: 0px;
+			}
+			#hide {
+				position: absolute;
+
+				right: 157px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/s.gif" alt="" />
+		<div>上午好</div>
+
+		<div class="box">
+			<label for="" id="hide">显示密码</label>
+			<input type="password" id="pwd" />
+		</div>
+		<script>
+			// 常用元素的属性操作
+			// （1）innerText、innerHTML改变元素内容
+			// （2）src、href
+			// （3）id、alt、title
+			// (ps:href 表示超文本引用（hypertext reference），在 link和a 等元素上使用。src 表示来源地址，在 img、script、iframe 等元素上。
+			// src 的内容，是页面必不可少的一部分，是引入。href 的内容，是与该页面有关联，是引用。区别就是，引入和引用。)
+			var img = document.querySelector('img');
+			var div = document.querySelector('div');
+			var date = new Date();
+			let h = date.getHours();
+			if (h > 12) {
+				img.src = '下午好.jpg';
+				div.innerHTML = '下午好，我的同学';
+			} else if (h > 10) {
+				img.src = '中午好.jpg';
+				div.innerHTML = '中午好，我的同学';
+			} else {
+				img.src = '早上好.jpg';
+				div.innerHTML = '早上好';
+			}
+			var label = document.getElementById('hide');
+			var pwd = document.getElementById('pwd');
+			let flag = 0;
+			label.onclick = function () {
+				if (!flag) {
+					pwd.type = 'text';
+					label.innerHTML = '隐藏密码';
+					flag = 1;
+				} else {
+					pwd.type = 'password';
+					label.innerHTML = '显示密码';
+					flag = 0;
+				}
+			};
+		</script>
+	</body>
+</html>
