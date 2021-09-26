@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			input {
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="text" value="手机" />
+		<button id="btn">开关灯</button>
+		<script>
+			var inp = document.querySelector('input');
+			var btn = document.getElementById('btn');
+			inp.onfocus = function () {
+				if (this.value == '手机') {
+					this.value = '';
+				}
+				this.style.color = '#333';
+			};
+			inp.onblur = function () {
+				if (this.value === '') {
+					this.value = '手机';
+				}
+				this.style.color = '#999';
+			};
+			var flag = 0;
+			btn.onclick = function () {
+				if (flag == 0) {
+					document.body.style.backgroundColor = 'black';
+					flag = 1;
+					console.log(flag);
+				} else if (flag == 1) {
+					document.body.style.backgroundColor = '#fff';
+					flag = 0;
+				}
+			};
+		</script>
+	</body>
+</html>
