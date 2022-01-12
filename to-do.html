@@ -187,19 +187,19 @@
 			//搜索
 			var query = document.getElementById('search');
 			query.onclick = search;
-			// query.onclick = search();  为啥用这个就只显示喝水。。不懂
 			function search() {
 				var searchInput = document.getElementById('searchInput').value;
 				arr = [];
 				for (i = 0; i <= list.length - 1; i++) {
 					if (list[i].name.indexOf(searchInput) !== -1) {
-						console.log(list[i]);
+						// console.log(list[i]);
 						arr.push(list[i]);
-						console.log(arr);
+						// console.log(arr);
 						render(arr);
 					}
 				}
 			}
+
 			//敲回车搜索
 			searchInput.addEventListener('keyup', function (e) {
 				if (e.key === 'Enter') {
