@@ -11,7 +11,9 @@ function Swiper(option) {
 			this.elBtnRight = this.elWrapper.querySelector('.btn-right');
 			this.elBtnLeft = this.elWrapper.querySelector('.btn-left');
 			this.len = this.elWrapper.querySelectorAll('.swiper-item').length;
-			option.autoplay ? this.autoplay() : false;
+			if (option.autoplay) {
+				this.autoplay();
+			}
 		},
 		bind: function () {
 			var that = this;
@@ -33,14 +35,23 @@ function Swiper(option) {
 		prev() {
 			var to = this.currentIndex - 1;
 			if (to < 0) {
-				option.loop ? (to = this.len - 1) : (to = this.currentIndex);
+				// option.loop ? (to = this.len - 1) : (to = this.currentIndex);
+				if (!option.loop) {
+					return;
+				} else {
+					to = this.len - 1;
+				}
 			}
 			this.handleCurrentIndexChange(to);
 		},
 		next() {
 			var to = this.currentIndex + 1;
 			if (to >= this.len) {
-				option.loop ? (to = 0) : (to = this.currentIndex);
+				if (!option.loop) {
+					return;
+				} else {
+					to = 0;
+				}
 			}
 			this.handleCurrentIndexChange(to);
 		},
