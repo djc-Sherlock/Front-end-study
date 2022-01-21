@@ -99,6 +99,7 @@
 			var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
 
 			j_cbAll.onclick = function () {
+				// this.checked 它可以得到当前复选框的选中状态如果是true 就是选中，如果是false 就是未选中
 				for (var i = 0; i < j_tbs.length; i++) {
 					j_tbs[i].checked = this.checked;
 				}
