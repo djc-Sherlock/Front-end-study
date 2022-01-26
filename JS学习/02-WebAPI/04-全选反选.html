@@ -104,6 +104,18 @@
 					j_tbs[i].checked = this.checked;
 				}
 			};
+			for (i = 0; i < j_tbs.length; i++) {
+				j_tbs[i].onclick = function () {
+					var flag = true;
+					for (var i = 0; i < j_tbs.length; i++) {
+						if (!j_tbs[i].checked) {
+							flag = false;
+							break;
+						}
+					}
+					j_cbAll.checked = flag;
+				};
+			}
 		</script>
 	</body>
 </html>
