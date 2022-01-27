@@ -42,6 +42,20 @@
 		<textarea name="" id=""></textarea>
 		<button>发布</button>
 		<ul></ul>
-		<script></script>
+		<script>
+			var btn = document.querySelector('button');
+			var textarea = document.querySelector('textarea');
+			var ul = document.querySelector('ul');
+			btn.onclick = function () {
+				if (textarea.value == '') {
+					alert('您没有输入内容');
+					return false;
+				} else {
+					var li = document.createElement('li');
+					li.innerHTML = textarea.value;
+					ul.appendChild(li);
+				}
+			};
+		</script>
 	</body>
 </html>
