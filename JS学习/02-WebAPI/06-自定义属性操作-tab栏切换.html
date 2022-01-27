@@ -73,7 +73,8 @@
 			var lis = document.querySelector('.tab_list').querySelectorAll('li');
 			var items = document.querySelectorAll('.item');
 			for (var i = 0; i < lis.length; i++) {
-				lis.setAttribute('index', i);
+				//lis.setAttribute('index', i);   对数组setAttribute是不对的，会报错。看了我半天
+				lis[i].setAttribute('index', i);
 				lis[i].onclick = function () {
 					for (var i = 0; i < lis.length; i++) {
 						lis[i].className = '';
