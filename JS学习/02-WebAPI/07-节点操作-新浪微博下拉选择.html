@@ -128,6 +128,7 @@
 			var lis = nav.children;
 			for (var i = 0; i < lis.length; i++) {
 				lis[i].onmouseover = function () {
+					//原来孩纸是从0开始啊~~~我一直想不通为啥是1 ，是我傻了
 					this.children[1].style.display = 'block';
 					// console.log(this.children[1]);
 				};
