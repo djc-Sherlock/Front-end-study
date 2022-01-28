@@ -66,6 +66,30 @@
 					score: 0
 				}
 			];
+			//动态生成表格
+			var tbody = document.querySelector('tbody');
+			for (var i = 0; i < datas.length; i++) {
+				// 创建行
+				var tr = document.createElement('tr');
+				// 添加到tbody节点里
+				tbody.appendChild(tr);
+				for (var k in datas[i]) {
+					//创建单元格
+					var td = document.createElement('td');
+					td.innerHTML = datas[i][k];
+					tr.appendChild(td);
+				}
+				//创建删除单元格
+				var td = document.createElement('td');
+				td.innerHTML = '<a href="javascript:0">删除</a>';
+				tr.appendChild(td);
+				var a = document.querySelectorAll('a');
+				for (var i = 0; i < a.length; i++) {
+					a[i].onclick = function () {
+						tbody.removeChild(this.parentNode.parentNode);
+					};
+				}
+			}
 		</script>
 	</body>
 </html>
