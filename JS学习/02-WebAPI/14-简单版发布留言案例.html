@@ -52,8 +52,16 @@
 					return false;
 				} else {
 					var li = document.createElement('li');
-					li.innerHTML = textarea.value;
+					li.innerHTML = textarea.value + "<a href='javascript:;'>删除</a>";
 					ul.appendChild(li);
+				}
+				//删除父节点
+				var a = document.querySelectorAll('a');
+				console.log(a);
+				for (var i = 0; i < a.length; i++) {
+					a[i].onclick = function () {
+						ul.removeChild(this.parentNode);
+					};
 				}
 			};
 		</script>
