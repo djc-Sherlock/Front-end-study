@@ -52,8 +52,15 @@
 					return false;
 				} else {
 					var li = document.createElement('li');
-					li.innerHTML = textarea.value + "<a href='javascript:;'>删除</a>";
-					ul.appendChild(li);
+					li.innerHTML =
+						textarea.value +
+						'<br/>' +
+						'发布时间：' +
+						todayTime() +
+						"<a href='javascript:;'>删除</a>";
+					// ul.appendChild(li);
+					// 添加留言节点，永远放在最前面
+					ul.insertBefore(li, ul.children[0]);
 				}
 				//删除父节点
 				var a = document.querySelectorAll('a');
@@ -64,6 +71,32 @@
 					};
 				}
 			};
+			function todayTime() {
+				var date = new Date();
+				var curYear = date.getFullYear();
+				var curMonth = date.getMonth() + 1;
+				var curDate = date.getDate();
+				if (curMonth < 10) {
+					curMonth = '0' + curMonth;
+				}
+				if (curDate < 10) {
+					curDate = '0' + curDate;
+				}
+				var curHours = date.getHours();
+				var curMinutes = date.getMinutes();
+				var curtime =
+					curYear +
+					' 年 ' +
+					curMonth +
+					' 月 ' +
+					curDate +
+					' 日' +
+					curHours +
+					'时 ' +
+					curMinutes +
+					'分 ';
+				return curtime;
+			}
 		</script>
 	</body>
 </html>
