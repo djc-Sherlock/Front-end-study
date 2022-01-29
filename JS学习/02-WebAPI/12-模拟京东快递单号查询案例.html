@@ -69,7 +69,7 @@
 				con.style.display = 'none';
 			});
 			input.addEventListener('focus', function () {
-				if (this.value !== '') {
+				if (!this.value) {
 					con.style.display = 'block';
 				}
 			});
