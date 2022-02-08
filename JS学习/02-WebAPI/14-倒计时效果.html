@@ -39,6 +39,7 @@
         var minute = document.querySelector('.minute'); // 分钟的黑色盒子
         var second = document.querySelector('.second'); // 秒数的黑色盒子
         var inputTime = +new Date('2022-2-8 18:00:00'); // 返回的是用户输入时间总的毫秒数
+        countDown(); 
         // 2. 开启定时器
         setInterval(countDown, 1000);
         function countDown() {
