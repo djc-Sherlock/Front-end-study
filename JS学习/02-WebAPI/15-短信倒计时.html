@@ -22,16 +22,17 @@
 		<button id="btn">发送</button>
 		<script>
 			var btn = document.getElementById('btn');
-			var time = 1; //倒计时秒数
 			btn.addEventListener('click', function () {
+				var time = 1; //倒计时秒数
 				btn.disabled = true;
+				btn.innerHTML = '还剩下' + time + '秒';
 				var timer = setInterval(() => {
 					if (time == 0) {
 						btn.disabled = false;
 						clearInterval(timer);
-						btn.innerHTML = '发送';
+						btn.innerHTML = '重新发送';
 					} else {
-						btn.innerHTML = '还剩下' + time + '秒';
+						btn.innerHTML = '还剩下' + (time - 1) + '秒';
 						time--;
 					}
 				}, 1000);
