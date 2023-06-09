@@ -67,9 +67,7 @@
 					筛选：
 					<button class="filter-btn filter-btn-all" data-completed="all">全部</button>
 					<button class="filter-btn filter-btn-active" data-completed="0">未完成</button>
-					<button class="filter-btn filter-btn-completed" data-completed="1">
-						已完成
-					</button>
+					<button class="filter-btn filter-btn-completed" data-completed="1">已完成</button>
 				</div>
 				<button class="btn-clean">清空</button>
 			</div>
@@ -167,9 +165,7 @@
 				var html = '';
 				list.forEach((item, index) => {
 					var itemClass = item.completed ? 'todo-item item-complete' : 'todo-item';
-					var spanClass = item.completed
-						? 'icon-complete icon-complete-active'
-						: 'icon-complete';
+					var spanClass = item.completed ? 'icon-complete icon-complete-active' : 'icon-complete';
 					html =
 						html +
 						`<li class="${itemClass}">
